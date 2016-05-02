@@ -3,7 +3,7 @@
 # Scrutinizer CI Integration for SilverStripe Modules
 
 ## Important Note 
-This module was forked from [silverstripe-gitlab-ci-support](https://github.com/danbroooks/silverstripe-gitlab-ci-support)
+This module was forked from [danbroooks/silverstripe-gitlab-ci-support](https://github.com/danbroooks/silverstripe-gitlab-ci-support)
 and is still actively under development. It is advised that you do not
 attempt to use this module until this notice has been removed. 
 
