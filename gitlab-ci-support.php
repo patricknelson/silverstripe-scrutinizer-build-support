@@ -1,17 +1,22 @@
 <?php
 
+// TODO: This needs a lot of documentation!
+
 if (php_sapi_name() != 'cli') {
 	header('HTTP/1.0 404 Not Found');
 	exit;
 }
 
+
 function load_json($file) {
 	return json_decode(file_get_contents($file), true);
 }
 
+
 function save_json($file, $obj) {
 	file_put_contents($file, json_encode($obj));
 }
+
 
 class ComposerJSON {
 
@@ -39,6 +44,10 @@ class ComposerJSON {
 
 }
 
+
+/**
+ * TODO: Is there any particular reason why all these methods are private if you can only construct and call ->initialize()? Can't even extend and modify functionality.
+ */
 class SilverStripeScrutinizerCiSupport {
 
 	private $moduleFolder;
@@ -64,6 +73,7 @@ class SilverStripeScrutinizerCiSupport {
 		$this->moveProjectIntoRoot();
 		$this->moveToRoot('composer.json');
 		$this->moveToRoot('phpunit.xml');
+		$this->moveToRoot('_ss_environment.php');
 		$this->replaceInFile('{{MODULE_DIR}}', $this->moduleFolder, './phpunit.xml');
 		$this->run_cmd('rm ' . $this->supportFolder . ' -fr');
 		$this->addDepenanciesToComposer();
@@ -138,7 +148,6 @@ class SilverStripeScrutinizerCiSupport {
 	}
 }
 
+
 $support = new SilverStripeScrutinizerCiSupport('module-under-test', __DIR__);
 $support->initialize();
-
-
