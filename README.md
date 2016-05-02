@@ -2,16 +2,15 @@
 
 # Scrutinizer CI Integration for SilverStripe Modules
 
-## Important Note 
-This module was forked from [danbroooks/silverstripe-gitlab-ci-support](https://github.com/danbroooks/silverstripe-gitlab-ci-support)
-and is still actively under development. It is advised that you do not
-attempt to use this module until this notice has been removed. 
-
-
 Testing SilverStripe modules in CI environments requires some setting up.
 For modules to be under independent version control in git, a SilverStripe
 test environment needs to be installed underneath when they are pulled
 into GitLab CI for testing.  This module automates that build step.
+
+## Important Note (Under Construction) 
+This module was forked from [danbroooks/silverstripe-gitlab-ci-support](https://github.com/danbroooks/silverstripe-gitlab-ci-support)
+and is still actively under development. It is advised that you do not
+attempt to use this module until this notice has been removed. 
 
 ## Setup
 
