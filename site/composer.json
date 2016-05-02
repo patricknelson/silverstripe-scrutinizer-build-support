@@ -1,6 +1,6 @@
 {
-	"name": "silverstripe-gitlab-ci-project",
-	"description": "Blank silverstripe project for running module tests in Gitlab CI",
+	"name": "silverstripe-scrutinizer-ci-project",
+	"description": "Blank silverstripe project for running module tests in Scrutinizer CI",
 
 	"require": {
 		"php": ">=5.4",

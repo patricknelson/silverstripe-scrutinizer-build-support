@@ -1,10 +1,17 @@
 
-# Gitlab CI Integration for SilverStripe Modules
+
+# Scrutinizer CI Integration for SilverStripe Modules
+
+## Important Note 
+This module was forked from [silverstripe-gitlab-ci-support](https://github.com/danbroooks/silverstripe-gitlab-ci-support)
+and is still actively under development. It is advised that you do not
+attempt to use this module until this notice has been removed. 
+
 
 Testing SilverStripe modules in CI environments requires some setting up.
-For modules to be under independent version control in git,
-a SilverStripe test enviroment needs to be installed underneath when they are pulled into GitLab CI for testing.
-This module automates that build step.
+For modules to be under independent version control in git, a SilverStripe
+test environment needs to be installed underneath when they are pulled
+into GitLab CI for testing.  This module automates that build step.
 
 ## Setup
 
@@ -12,9 +19,9 @@ Add the following to the start of your build steps:
 
   ```bash
   git clean -ffdx
-  rm ./gitlab-ci-support -fr
-  git clone https://github.com/dangerdan/silverstripe-gitlab-ci-support.git ./gitlab-ci-support
-  php ./gitlab-ci-support/gitlab-ci-support.php
+  rm ./scrutinizer-ci-support -fr
+  git clone https://github.com/patricknelson/silverstripe-scrutinizer-ci-support.git ./scrutinizer-ci-support
+  php ./scrutinizer-ci-support/scrutinizer-ci-support.php
   ```
 
 This script will copy a `composer.json` file from the root of your module repository into the test environment,
@@ -27,9 +34,9 @@ A typical build might look like this:
 
   ```bash
   git clean -ffdx
-  rm ./gitlab-ci-support -fr
-  git clone https://github.com/dangerdan/silverstripe-gitlab-ci-support.git ./gitlab-ci-support
-  php ./gitlab-ci-support/gitlab-ci-support.php
+  rm ./scrutinizer-ci-support -fr
+  git clone https://github.com/patricknelson/silverstripe-scrutinizer-ci-support.git ./scrutinizer-ci-support
+  php ./scrutinizer-ci-support/scrutinizer-ci-support.php
 
   composer install
   cp ~/_ss_environment.php ./_ss_environment.php

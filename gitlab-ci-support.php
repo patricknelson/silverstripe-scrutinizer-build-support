@@ -39,7 +39,7 @@ class ComposerJSON {
 
 }
 
-class SilverStripeGitlabCiSupport {
+class SilverStripeScrutinizerCiSupport {
 
 	private $moduleFolder;
 	private $supportFolder;
@@ -138,7 +138,7 @@ class SilverStripeGitlabCiSupport {
 	}
 }
 
-$support = new SilverStripeGitlabCiSupport('module-under-test', __DIR__);
+$support = new SilverStripeScrutinizerCiSupport('module-under-test', __DIR__);
 $support->initialize();
 
 
